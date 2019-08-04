@@ -1,0 +1,9 @@
+<p>employees works!</p>
+<h1>{{empName}}</h1>
+<button [disabled]="isButtonDisabled" >Click Button</button><br/>
+<button (click)="performOpr()">Click to see console</button> <!-- For input binding HTML=> TS -->
+<div><input type="text" (input)="getInputData($event)"></div> <!-- for event binding -->
+{{outputData}}
+ <!-- 2 way binding -->
+ <div>For two way binding<input type="text" [(ngModel)] = "twoWayBindingVaribale"></div>
+ {{twoWayBindingVaribale}}
