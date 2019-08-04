@@ -1,0 +1,41 @@
+<p>employee works!</p>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-12"><p>Welcome to CSS</p></div>
+        </div>
+        <div *ngFor="let eDetails of employeeDetails2" class="row">
+                <div class="col-12"><p> {{eDetails.eName}}-{{eDetails.addr}}</p></div>
+        </div>
+</div>
+<h1>Directives examples are below</h1>
+<div><input type="text" [(ngModel)]="empName"><
+        <div><button (click)="clickButton()">Display Emp Name</button></div>
+        <div *ngIf="isButtonClicked":else xyz>
+            {{empName}}
+        </div>
+        <ng-template #xyz>
+            <p>No Employees selected</p>
+        </ng-template>
+        
+        <!-- Ng For template-->
+        <h1>ngFor template</h1>
+        <div *ngFor="let ename of empList"> 
+            <p>{{ename}}</p>
+        </div>
+</div>
+
+<h1>Example of ngSwitch</h1>
+<div [ngSwitch]="eNo">
+    <ng-template [ngSwitchCase]="5">
+           <p>Won 5 rs</p>
+    </ng-template>
+    <ng-template [ngSwitchCase]="10">
+            <p>Won 10 rs</p>
+     </ng-template>
+     <ng-template [ngSwitchCase]="15">
+            <p>Won 45 rs</p>
+     </ng-template>
+     <ng-template ngSwitchDefault>
+            <p> Nothing with default</p>
+     </ng-template>
+</div>
