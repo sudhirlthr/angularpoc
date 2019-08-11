@@ -1,0 +1,6 @@
+<app-emp-form (employeeDetails)="storeData($event)"></app-emp-form>
+<div class="container-fluid">Employee Details:
+        <div *ngFor="let emp of employeeDetails">
+                <app-emp-display [employeeDetailsDisplay]="emp"></app-emp-display>
+        </div>
+</div>
