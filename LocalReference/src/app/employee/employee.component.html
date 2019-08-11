@@ -1,0 +1,12 @@
+<p>employee works!</p>
+<div class="list-group-item">
+    <input type="text" class="form-control" placeholder="Enter name" #empName id="empName">
+    <input type="text" class="form-control" placeholder="Address" #address>
+    <input type="text" class="form-control" placeholder="Phone number" #phone>
+    <button type="submit" class="btn btn-primary" (click)="submitEmployee(empName, address, phone)">Submit</button>
+</div>
+<div *ngFor = "let empDetails of employeeDEtails">
+    <app-emp-display [emp] = "empDetails"></app-emp-display>
+</div>
+
+
