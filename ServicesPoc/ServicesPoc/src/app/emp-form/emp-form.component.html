@@ -1,0 +1,13 @@
+<div class="list-group-item">
+    <div class="form-group">
+            <label for="exampleInputEmail1">Employee Name</label>
+            <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter name" [(ngModel)]="empName">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your name with anyone else.</small>
+            <!-- {{empName}}   -->
+        </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Address</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Address" [(ngModel)] = "address">
+          </div>
+          <button type="submit" class="btn btn-primary" (click)=submitEmployee()>Submit</button>
+</div>
